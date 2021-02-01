@@ -21,3 +21,7 @@ allprojects {
         maven { url = uri("https://maven.pkg.jetbrains.space/public/p/compose/dev") }
     }
 }
+
+dependencies {
+    project(":youtube-stream-extractor")
+}
