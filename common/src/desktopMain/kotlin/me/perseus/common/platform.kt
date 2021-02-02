@@ -7,8 +7,9 @@ actual fun getPlatformName(): String {
 }
 
 actual fun doGood() {
-    val list = YoutubeService().fromPlaylist("OLAK5uy_krx7gQcGv4WVzMCNnomWxtXIdp1IWen68")
-    list.forEach {
-        println(it.file())
+    YoutubeService().fromPlaylistAsync("OLAK5uy_krx7gQcGv4WVzMCNnomWxtXIdp1IWen68")?.thenApply { list ->
+        list.forEach {
+            println(it.file())
+        }
     }
 }
