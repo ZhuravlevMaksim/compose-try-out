@@ -1,8 +1,10 @@
 package me.perseus.common
+
 import androidx.compose.material.Text
 import androidx.compose.material.Button
 import androidx.compose.material.MaterialTheme
 import androidx.compose.runtime.*
+
 
 @Composable
 fun App() {
@@ -11,6 +13,7 @@ fun App() {
     MaterialTheme {
         Button(onClick = {
             text = "Hello, ${getPlatformName()}"
+            doGood()
         }) {
             Text(text)
         }
